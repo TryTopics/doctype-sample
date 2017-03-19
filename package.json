@@ -3,6 +3,7 @@
   "description": "Reference implementation for a custom Substance editor",
   "module": "index.es.js",
   "jsnext:main": "index.es.js",
+  "main": "index.js",
   "devDependencies": {
     "substance": "1.0.0-beta.6.2",
     "font-awesome": "4.5.0",
@@ -10,7 +11,8 @@
   },
   "scripts": {
     "build": "node make",
-    "start": "node make -s -w"
+    "start": "node make -s -w",
+    "prepublish": "node make"
   },
   "version": "1.0.0-beta.6",
   "files": [
