@@ -28,6 +28,15 @@ b.serve({
 })
 
 function _client(devMode) {
+  b.js('lib/simple-writer/SimpleWriterPackage.js', {
+    target: {
+      dest: './dist/SimpleWriterPackage.js',
+      format: 'umd',
+      moduleName: 'SimpleWriterPackage'
+    },
+    buble: !devMode
+  })
+
   b.css('./app/app.css', 'dist/app.css', { variables: true })
   b.js('app/app.js', {
     target: {
